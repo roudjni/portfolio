@@ -1,17 +1,12 @@
-/* ======================
-   Variáveis Globais
-   ====================== */
-   :root {
-    --primary: #2ecc71;
-    --secondary: #2980b9;
-    --dark: #2c3e50;
-    --light: #f8f9fa;
+:root {
+    --primary: #3498db; /* Azul moderno */
+    --secondary: #2ecc71; /* Verde vibrante */
+    --dark: #2c3e50; /* Azul escuro */
+    --light: #f8f9fa; /* Branco suave */
     --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* ======================
-   Reset e Estilos Base
-   ====================== */
+/* Reset e Estilos Base */
 * {
     margin: 0;
     padding: 0;
@@ -26,77 +21,7 @@ body {
     line-height: 1.6;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* ======================
-   Componentes Reutilizáveis
-   ====================== */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.8rem;
-    margin-bottom: 4rem;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: var(--primary);
-    border-radius: 2px;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.btn-primary {
-    background: white;
-    color: var(--primary);
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.btn-secondary {
-    border: 2px solid white;
-    color: white;
-}
-
-.btn-secondary:hover {
-    background: white;
-    color: var(--primary);
-}
-
-/* ======================
-   Layout Principal
-   ====================== */
+/* Navbar */
 .navbar {
     position: fixed;
     width: 100%;
@@ -154,9 +79,7 @@ img {
     cursor: pointer;
 }
 
-/* ======================
-   Seções Específicas
-   ====================== */
+/* Hero Section */
 .hero {
     padding: 12rem 0 6rem;
     min-height: 100vh;
@@ -179,12 +102,27 @@ img {
     opacity: 0.9;
 }
 
-.hero-btns {
+.hero-stats {
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
+    margin-top: 4rem;
     justify-content: center;
 }
 
+.stat {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    min-width: 150px;
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Sobre */
 .sobre-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -231,9 +169,7 @@ img {
     color: var(--dark);
 }
 
-/* ======================
-   Timeline de Experiência
-   ====================== */
+/* Experiência */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -283,9 +219,7 @@ img {
     transform: rotate(45deg);
 }
 
-/* ======================
-   Cards de Projetos
-   ====================== */
+/* Projetos */
 .projetos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -371,9 +305,7 @@ img {
     color: var(--secondary);
 }
 
-/* ======================
-   Formulário de Contato
-   ====================== */
+/* Contato */
 .contato-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -436,9 +368,7 @@ img {
     color: var(--primary);
 }
 
-/* ======================
-   Footer
-   ====================== */
+/* Footer */
 footer {
     background: var(--dark);
     color: white;
@@ -479,10 +409,8 @@ footer {
     text-align: center;
 }
 
-/* ======================
-   Responsividade
-   ====================== */
-@media (max-width: 992px) {
+/* Responsividade */
+@media (max-width: 768px) {
     .nav-links {
         display: none;
     }
@@ -497,7 +425,7 @@ footer {
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .footer-content {
